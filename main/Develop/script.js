@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var MINLENGTH = 8;
-var MAXLENGTH = 128;
+const MINLENGTH = 8;
+const MAXLENGTH = 128;
 
 
 // Write password to the #password input
@@ -16,28 +16,28 @@ function writePassword() {
 
 function lengthFunc() {
     var length = prompt("Password Length:");
+
     length = parseInt(length, 10);
+
     if (Number.isInteger(length)) {
-        alert("number");
         if (length < MINLENGTH) {
-            alert("too short");
+            alert("**NUMBER TOO SMALL** \nPlease input a number between 8 and 128 (inclusive).");
         }
         else if (length > MAXLENGTH) {
-            alert("too long");
+            alert("**NUMBER TOO SMALL** \nPlease input a number between 8 and 128 (inclusive).");
         }
         else {
             return length;
         }
     }
     else {
-        alert("non number");
+        alert("Please input a number between 8 and 128 (inclusive).");
     }
 }
 
 function charTypeFunc() {
     // lowercase, uppercase, numeric, special characters
     alert("The following are for criteria for password, select confirm to add or cancel to not");
-    // var charType = "";
 
     var charTypeArray = [];
 
@@ -51,29 +51,21 @@ function charTypeFunc() {
     charTypeArray.push(numericCheck);
     charTypeArray.push(specialCharCheck);
 
-    // if (lowercaseCheck) {
-    //     lowercaseCheck = "l";
-    // }
+    var checkloop = "";
 
-    // if (uppercaseCheck) {
-    //     uppercaseCheck = "u";
-    // }
+    for (let i = 0; i < charTypeArray.length; i++) {
+        if (charTypeArray[i]) {
+            checkloop += 1
+        }
 
-    // if (numericCheck) {
-    //     numericCheck = "n";
-    // }
+    }
+    if (checkloop >= 1) {
+        return charTypeArray;
+    }
+    else {
+        alert("Please select at least one password criteria");
+    }
 
-    // if (specialCharCheck) {
-    //     specialCharCheck = "s";
-    // }
-
-    // charType += lowercaseCheck;
-    // charType += uppercaseCheck;
-    // charType += numericCheck;
-    // charType += specialCharCheck;
-    // return charType;
-
-    return charTypeArray;
 }
 
 
@@ -107,15 +99,15 @@ function generatePassword() {
     if (length) {
         var charType = charTypeFunc();
         var charSet = charSetFunc(charType);
-        console.log(charSet);
+        // console.log(charSet);
 
         for (let i = 0; i < length; i++) {
             char = Math.floor(Math.random() * charSet.length);
 
-            console.log("char as a num: " + char);
+            // console.log("char as a num: " + char);
 
             password += charSet.charAt(char);
-            console.log("char as a letter: " + charSet.charAt(char));
+            // console.log("char as a letter: " + charSet.charAt(char));
 
 
         }
@@ -123,12 +115,6 @@ function generatePassword() {
     }
 
     return password;
-
-
-
-
-
-
 }
 
 // Add event listener to generate button
