@@ -112,8 +112,8 @@ function charTypeFunc() {
     charTypeArray.push(specialCharCheck);
 
     // VALIDATION
-    // setting an empty variable
-    var checkloop;
+    // setting an empty string
+    var checkloop = "";
 
     // for loop adding numbers to the checkloop variable if the position of the charTypeArray is true
     for (let i = 0; i < charTypeArray.length; i++) {
