@@ -20,7 +20,8 @@ In completing this homework task, I broke the work down into the following:
 3. Getting the password:
     a. using the generatePassword() function supplied
         i. set variables to the above functions
-        ii. add to an empty string in a loop, looping the amount of times that the desired password length, a random character from the string made in the charSetFunc(array)
+        ii. add to an empty string in a loop, looping the amount of times that the desired password length, 
+        a random character from the string made in the charSetFunc(array)
 4. Left any code that was given
 5. Added a copy button:
     a. created function copy()
