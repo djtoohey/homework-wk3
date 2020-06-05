@@ -34,6 +34,6 @@ In completing this homework task, I broke the work down into the following:
 8. create README.md
 ```
 
-![password generator completed](./main/Assets/wk3imgPasswordGen.png)
+![password generator completed](./main/Assets/wk3imgPasswordGen.PNG)
 
 GitHub Pages: https://djtoohey.github.io/homework-wk3/main/Develop/index.html
